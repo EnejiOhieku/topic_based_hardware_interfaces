@@ -49,7 +49,7 @@ private:
   bool sum_wrapped_joint_states_{ false };
 
   // If the difference between the current joint state and joint command is less than this value,
-  // the joint command will not be published (-1 for disabled).
+  // the joint command will not be published.
   double trigger_joint_command_threshold_ = -1;
 };
 
