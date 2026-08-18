@@ -67,7 +67,6 @@ CallbackReturn JointStateTopicSystem::on_init(const hardware_interface::Hardware
   if (auto it = get_hardware_info().hardware_parameters.find("trigger_joint_command_threshold");
       it != get_hardware_info().hardware_parameters.end())
   {
-    trigger_joint_command_threshold_enabled_ = true;
     trigger_joint_command_threshold_ = std::stod(it->second);
   }
 
