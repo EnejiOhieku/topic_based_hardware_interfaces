@@ -194,7 +194,7 @@ hardware_interface::return_type JointStateTopicSystem::write(const rclcpp::Time&
                        get_command(joints[i].name + "/" + interface.name));
     }
   }
-  if (trigger_joint_command_threshold_enabled_ && diff <= trigger_joint_command_threshold_)
+  if (trigger_joint_command_threshold_ > 0 && diff <= trigger_joint_command_threshold_)
   {
     return hardware_interface::return_type::OK;
   }
